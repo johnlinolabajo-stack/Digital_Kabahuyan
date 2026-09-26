@@ -542,20 +542,7 @@ function loadLesson(reset = true) {
     document.getElementById("quizQuestion")
         .textContent = lesson.quiz.question;
 
-    const options =
-        document.querySelectorAll(".quiz-option");
-
-    lesson.quiz.answers.forEach((answer, index) => {
-
-        options[index].textContent = answer;
-
-        if (reset) {
-            options[index].classList.remove("correct");
-            options[index].classList.remove("wrong");
-            options[index].disabled = false;
-        }
-
-    });
+    updateQuizButtons(reset);
 
     if (reset) {
         document.getElementById("practiceCheck").checked = false;
@@ -565,7 +552,26 @@ function loadLesson(reset = true) {
 
     updateStep();
 
-    // updateQuizButtons();
+}
+
+
+// ================= QUIZ BUTTONS =================
+
+function updateQuizButtons(reset = true) {
+
+    const answers = getCurrentLessons()[currentLesson].quiz.answers;
+    const options = document.querySelectorAll(".quiz-option");
+
+    answers.forEach((answer, index) => {
+        const option = options[index];
+
+        option.textContent = answer;
+
+        if (reset) {
+            option.classList.remove("correct", "wrong");
+            option.disabled = false;
+        }
+    });
 }
 
 
