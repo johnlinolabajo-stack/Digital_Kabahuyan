@@ -95,6 +95,105 @@ button {
     color: #173d35;
 }
 
+.dark-mode-btn {
+    padding: 10px 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    background: white;
+    color: #173d35;
+}
+
+
+/* ================= DARK MODE ================= */
+
+body.dark-mode {
+    background: #10211e;
+    color: #e7f2ec;
+}
+
+.dark-mode .header {
+    background: #17302b;
+    border-color: #315149;
+}
+
+.dark-mode .logo b,
+.dark-mode .home-button,
+.dark-mode .lesson-card h3,
+.dark-mode .step-image,
+.dark-mode .replay-btn,
+.dark-mode .audio-btn,
+.dark-mode .dark-mode-btn {
+    color: #d9f3e6;
+}
+
+.dark-mode .nav-right select,
+.dark-mode .audio-btn,
+.dark-mode .dark-mode-btn,
+.dark-mode .progress-card,
+.dark-mode .lesson-card,
+.dark-mode .info-card,
+.dark-mode .step-card,
+.dark-mode .replay-btn,
+.dark-mode .practice-box,
+.dark-mode .quiz-card,
+.dark-mode .quiz-option,
+.dark-mode .back-btn {
+    background: #1b3731;
+    border-color: #42675d;
+    color: #e7f2ec;
+}
+
+.dark-mode .progress-header h2,
+.dark-mode .section-heading h2,
+.dark-mode .step-content h2,
+.dark-mode .step-content h3,
+.dark-mode .info-card p,
+.dark-mode .lesson-card p,
+.dark-mode .progress-message,
+.dark-mode .section-heading > span,
+.dark-mode .step-heading,
+.dark-mode .step-label,
+.dark-mode .warning,
+.dark-mode footer {
+    color: #c6d9d1;
+}
+
+.dark-mode .lesson-icon,
+.dark-mode .step-image {
+    background: #254b42;
+}
+
+.dark-mode .practice-card {
+    background: #1c4137;
+    border-color: #3d685a;
+}
+
+.dark-mode .level {
+    background: #554b24;
+    color: #fff0a8;
+}
+
+.dark-mode .progress-bar,
+.dark-mode .step-progress {
+    background: #365349;
+}
+
+.dark-mode .quiz-option.correct {
+    background: #285843;
+    border-color: #61bd8c;
+}
+
+.dark-mode .quiz-option.wrong {
+    background: #613939;
+    border-color: #e18282;
+}
+
+.dark-mode footer {
+    border-color: #315149;
+}
+
 
 /* ================= MAIN ================= */
 

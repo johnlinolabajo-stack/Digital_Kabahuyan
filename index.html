@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    // johnlino labajo
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +23,7 @@
 
         <div class="nav-right">
 
-            <label for="language">Language</label>
+            <label for="language" data-i18n="languageLabel">Language</label>
 
             <select id="language">
                 <option>English</option>
@@ -33,7 +32,11 @@
             </select>
 
             <button id="audioBtn" class="audio-btn">
-                🔊 <b>Audio: Off</b>
+                🔊 <b id="audioLabel">Audio: Off</b>
+            </button>
+
+            <button id="darkModeBtn" class="dark-mode-btn" type="button" aria-pressed="false">
+                🌙 <b id="darkModeLabel">Dark mode</b>
             </button>
 
         </div>
@@ -49,20 +52,18 @@
 
         <div class="hero-text">
 
-            <p class="small-title">WELCOME, LEARNER</p>
+            <p class="small-title" data-i18n="welcome">WELCOME, LEARNER</p>
 
             <h1>
-                Your digital skills<br>
-                journey starts here.
+                <span data-i18n="heroTitle">Your digital skills journey starts here.</span>
             </h1>
 
             <p>
-                Take your time. Learn one small step at a time,
-                and practice safely with simple information.
+                <span data-i18n="heroDescription">Take your time. Learn one small step at a time, and practice safely with simple information.</span>
             </p>
 
             <button class="yellow-btn" onclick="scrollToLessons()">
-                Browse lessons
+                <span data-i18n="browseLessons">Browse lessons</span>
             </button>
 
         </div>
@@ -93,15 +94,15 @@
         <div class="progress-header">
 
             <div>
-                <p class="small-title">YOUR PROGRESS</p>
+                <p class="small-title" data-i18n="yourProgress">YOUR PROGRESS</p>
 
                 <h2>
                     <span id="completedCount">0</span>
-                    lessons complete
+                    <span data-i18n="lessonsComplete">lessons complete</span>
                 </h2>
             </div>
 
-            <span class="level">🌱 Beginner level</span>
+            <span class="level">🌱 <span data-i18n="beginnerLevel">Beginner level</span></span>
 
         </div>
 
@@ -110,7 +111,7 @@
         </div>
 
         <p class="progress-message">
-            Every new skill is a reason to feel proud.
+            <span data-i18n="progressMessage">Every new skill is a reason to feel proud.</span>
         </p>
 
     </section>
@@ -122,11 +123,11 @@
         <div class="section-heading">
 
             <div>
-                <p class="small-title">LEARN AT YOUR OWN PACE</p>
-                <h2>Choose a lesson</h2>
+                <p class="small-title" data-i18n="learnPace">LEARN AT YOUR OWN PACE</p>
+                <h2 data-i18n="chooseLesson">Choose a lesson</h2>
             </div>
 
-            <span>6 lessons</span>
+            <span data-i18n="lessonCount">6 lessons</span>
 
         </div>
 
@@ -138,15 +139,15 @@
 
                 <div class="lesson-icon">📱</div>
 
-                <h3>Get to know your phone</h3>
+                <h3 data-lesson-title="0">Get to know your phone</h3>
 
-                <p>
+                <p data-lesson-description="0">
                     Learn simple phone controls
                     and how to open an app.
                 </p>
 
                 <span class="start-link">
-                    Start lesson →
+                    <span data-i18n="startLesson">Start lesson →</span>
                 </span>
 
             </div>
@@ -157,15 +158,15 @@
 
                 <div class="lesson-icon">💬</div>
 
-                <h3>Send a kind message</h3>
+                <h3 data-lesson-title="1">Send a kind message</h3>
 
-                <p>
+                <p data-lesson-description="1">
                     Learn how to send a simple
                     and respectful message.
                 </p>
 
                 <span class="start-link">
-                    Start lesson →
+                    <span data-i18n="startLesson">Start lesson →</span>
                 </span>
 
             </div>
@@ -176,15 +177,15 @@
 
                 <div class="lesson-icon">📷</div>
 
-                <h3>Take a clear product photo</h3>
+                <h3 data-lesson-title="2">Take a clear product photo</h3>
 
-                <p>
+                <p data-lesson-description="2">
                     Learn simple tips for taking
                     clear photos.
                 </p>
 
                 <span class="start-link">
-                    Start lesson →
+                    <span data-i18n="startLesson">Start lesson →</span>
                 </span>
 
             </div>
@@ -195,15 +196,15 @@
 
                 <div class="lesson-icon">🌐</div>
 
-                <h3>Search the internet</h3>
+                <h3 data-lesson-title="3">Search the internet</h3>
 
-                <p>
+                <p data-lesson-description="3">
                     Learn how to search for
                     useful information online.
                 </p>
 
                 <span class="start-link">
-                    Start lesson →
+                    <span data-i18n="startLesson">Start lesson →</span>
                 </span>
 
             </div>
@@ -214,15 +215,15 @@
 
                 <div class="lesson-icon">🛒</div>
 
-                <h3>Online shopping basics</h3>
+                <h3 data-lesson-title="4">Online shopping basics</h3>
 
-                <p>
+                <p data-lesson-description="4">
                     Learn basic and safe
                     online shopping practices.
                 </p>
 
                 <span class="start-link">
-                    Start lesson →
+                    <span data-i18n="startLesson">Start lesson →</span>
                 </span>
 
             </div>
@@ -233,15 +234,15 @@
 
                 <div class="lesson-icon">🔐</div>
 
-                <h3>Stay safe online</h3>
+                <h3 data-lesson-title="5">Stay safe online</h3>
 
-                <p>
+                <p data-lesson-description="5">
                     Learn simple ways to protect
                     your personal information.
                 </p>
 
                 <span class="start-link">
-                    Start lesson →
+                    <span data-i18n="startLesson">Start lesson →</span>
                 </span>
 
             </div>
@@ -258,7 +259,7 @@
 <main id="lessonPage" class="lesson-page hidden">
 
     <button class="home-button" onclick="goHome()">
-        ← Home
+        ← <span data-i18n="home">Home</span>
     </button>
 
 
@@ -266,7 +267,7 @@
     <section class="lesson-header">
 
         <p class="small-title">
-            📱 DIGITAL KABUHAYAN
+            📱 <span data-i18n="brand">DIGITAL KABUHAYAN</span>
         </p>
 
         <h1 id="lessonTitle">
@@ -285,7 +286,7 @@
 
         <div class="info-card">
 
-            <h3>What you will learn</h3>
+            <h3 data-i18n="whatLearn">What you will learn</h3>
 
             <p id="learnText">
                 Learn simple phone controls and how to open an app.
@@ -296,7 +297,7 @@
 
         <div class="info-card">
 
-            <h3>Why it is useful</h3>
+            <h3 data-i18n="whyUseful">Why it is useful</h3>
 
             <p id="usefulText">
                 These basics help you use your phone with confidence.
@@ -311,7 +312,7 @@
     <div class="step-heading">
 
         <span>
-            Step <span id="stepNumber">1</span> of 4
+            <span data-i18n="step">Step</span> <span id="stepNumber">1</span> <span data-i18n="of">of</span> 4
         </span>
 
         <span id="stepPercent">25%</span>
@@ -333,7 +334,7 @@
         <div class="step-content">
 
             <p class="step-label">
-                Step <span id="currentStep">1</span>
+                <span data-i18n="step">Step</span> <span id="currentStep">1</span>
             </p>
 
             <h2 id="stepTitle">
@@ -345,7 +346,7 @@
             </h3>
 
             <button class="replay-btn" onclick="readInstruction()">
-                🔊 Replay instruction
+                🔊 <span data-i18n="replay">Replay instruction</span>
             </button>
 
             <div class="navigation-buttons">
@@ -354,14 +355,14 @@
                     id="backBtn"
                     class="back-btn"
                     onclick="previousStep()">
-                    ← Back
+                    ← <span data-i18n="back">Back</span>
                 </button>
 
                 <button
                     id="nextBtn"
                     class="next-btn"
                     onclick="nextStep()">
-                    Next →
+                    <span data-i18n="next">Next</span> →
                 </button>
 
             </div>
@@ -374,15 +375,14 @@
     <!-- PRACTICE -->
     <section class="practice-card">
 
-        <h2>✋ Practice safely</h2>
+        <h2>✋ <span data-i18n="practiceSafely">Practice safely</span></h2>
 
         <p>
-            Practice: Find the brightness control.
-            You do not need to change any settings.
+            <span data-i18n="practiceText">Practice: Find the brightness control. You do not need to change any settings.</span>
         </p>
 
         <div class="practice-box">
-            Brightness control
+            <span data-i18n="brightnessControl">Brightness control</span>
         </div>
 
         <label class="checkbox-label">
@@ -392,7 +392,7 @@
                 id="practiceCheck"
                 onchange="checkPractice()">
 
-            I tried the practice
+            <span data-i18n="triedPractice">I tried the practice</span>
 
         </label>
 
@@ -402,7 +402,7 @@
     <!-- QUIZ -->
     <section class="quiz-card">
 
-        <h2>❓ Quick quiz</h2>
+        <h2>❓ <span data-i18n="quickQuiz">Quick quiz</span></h2>
 
         <p id="quizQuestion">
             What should you do to open an app?
@@ -435,28 +435,27 @@
             class="finish-btn"
             onclick="finishLesson()"
             disabled>
-            I understand — finish lesson
+            <span data-i18n="finishLesson">I understand — finish lesson</span>
         </button>
 
 
         <p class="warning">
-            Practice uses pretend information only.
-            Never enter real passwords, PINs, OTPs, or payment details.
+            <span data-i18n="warning">Practice uses pretend information only. Never enter real passwords, PINs, OTPs, or payment details.</span>
         </p>
 
     </section>
 
 </main>
-
+b
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <span>Digital Kabuhayan</span>
+    <span data-i18n="footerBrand">Digital Kabuhayan</span>
 
     <span>
-        A patient digital teacher, one step at a time.
+        <span data-i18n="footerText">A patient digital teacher, one step at a time.</span>
     </span>
 
 </footer>
@@ -466,3 +465,4 @@
 
 </body>
 </html>
+l
