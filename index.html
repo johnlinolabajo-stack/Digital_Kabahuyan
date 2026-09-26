@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Kabuhayan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="nav-container">
+
+        <div class="logo">
+            <span class="logo-circle">DK</span>
+            <span>Digital <b>Kabuhayan</b></span>
+        </div>
+
+        <div class="nav-right">
+
+            <label for="language">Language</label>
+
+            <select id="language">
+                <option>English</option>
+                <option>Bisaya</option>
+                <option>Filipino</option>
+            </select>
+
+            <button id="audioBtn" class="audio-btn">
+                🔊 <b>Audio: Off</b>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- ================= HOME PAGE ================= -->
+<main id="homePage" class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">WELCOME, LEARNER</p>
+
+            <h1>
+                Your digital skills<br>
+                journey starts here.
+            </h1>
+
+            <p>
+                Take your time. Learn one small step at a time,
+                and practice safely with simple information.
+            </p>
+
+            <button class="yellow-btn" onclick="scrollToLessons()">
+                Browse lessons
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="yellow-circle"></div>
+
+            <div class="phone">
+                <div class="phone-dot"></div>
+
+                <div class="smile">☺</div>
+
+                <strong>Ready to learn!</strong>
+            </div>
+
+            <div class="leaf leaf1"></div>
+            <div class="leaf leaf2"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROGRESS -->
+    <section class="progress-card">
+
+        <div class="progress-header">
+
+            <div>
+                <p class="small-title">YOUR PROGRESS</p>
+
+                <h2>
+                    <span id="completedCount">0</span>
+                    lessons complete
+                </h2>
+            </div>
+
+            <span class="level">🌱 Beginner level</span>
+
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+
+        <p class="progress-message">
+            Every new skill is a reason to feel proud.
+        </p>
+
+    </section>
+
+
+    <!-- LESSONS -->
+    <section id="lessons" class="lessons-section">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="small-title">LEARN AT YOUR OWN PACE</p>
+                <h2>Choose a lesson</h2>
+            </div>
+
+            <span>6 lessons</span>
+
+        </div>
+
+
+        <div class="lesson-grid">
+
+            <div class="lesson-card"
+                 onclick="openLesson(0)">
+
+                <div class="lesson-icon">📱</div>
+
+                <h3>Get to know your phone</h3>
+
+                <p>
+                    Learn simple phone controls
+                    and how to open an app.
+                </p>
+
+                <span class="start-link">
+                    Start lesson →
+                </span>
+
+            </div>
+
+
+            <div class="lesson-card"
+                 onclick="openLesson(1)">
+
+                <div class="lesson-icon">💬</div>
+
+                <h3>Send a kind message</h3>
+
+                <p>
+                    Learn how to send a simple
+                    and respectful message.
+                </p>
+
+                <span class="start-link">
+                    Start lesson →
+                </span>
+
+            </div>
+
+
+            <div class="lesson-card"
+                 onclick="openLesson(2)">
+
+                <div class="lesson-icon">📷</div>
+
+                <h3>Take a clear product photo</h3>
+
+                <p>
+                    Learn simple tips for taking
+                    clear photos.
+                </p>
+
+                <span class="start-link">
+                    Start lesson →
+                </span>
+
+            </div>
+
+
+            <div class="lesson-card"
+                 onclick="openLesson(3)">
+
+                <div class="lesson-icon">🌐</div>
+
+                <h3>Search the internet</h3>
+
+                <p>
+                    Learn how to search for
+                    useful information online.
+                </p>
+
+                <span class="start-link">
+                    Start lesson →
+                </span>
+
+            </div>
+
+
+            <div class="lesson-card"
+                 onclick="openLesson(4)">
+
+                <div class="lesson-icon">🛒</div>
+
+                <h3>Online shopping basics</h3>
+
+                <p>
+                    Learn basic and safe
+                    online shopping practices.
+                </p>
+
+                <span class="start-link">
+                    Start lesson →
+                </span>
+
+            </div>
+
+
+            <div class="lesson-card"
+                 onclick="openLesson(5)">
+
+                <div class="lesson-icon">🔐</div>
+
+                <h3>Stay safe online</h3>
+
+                <p>
+                    Learn simple ways to protect
+                    your personal information.
+                </p>
+
+                <span class="start-link">
+                    Start lesson →
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= LESSON PAGE ================= -->
+
+<main id="lessonPage" class="lesson-page hidden">
+
+    <button class="home-button" onclick="goHome()">
+        ← Home
+    </button>
+
+
+    <!-- LESSON HEADER -->
+    <section class="lesson-header">
+
+        <p class="small-title">
+            📱 DIGITAL KABUHAYAN
+        </p>
+
+        <h1 id="lessonTitle">
+            Get to know your phone
+        </h1>
+
+        <p id="lessonDescription">
+            Learn simple phone controls and how to open an app.
+        </p>
+
+    </section>
+
+
+    <!-- INFORMATION BOXES -->
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <h3>What you will learn</h3>
+
+            <p id="learnText">
+                Learn simple phone controls and how to open an app.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>Why it is useful</h3>
+
+            <p id="usefulText">
+                These basics help you use your phone with confidence.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- STEP PROGRESS -->
+    <div class="step-heading">
+
+        <span>
+            Step <span id="stepNumber">1</span> of 4
+        </span>
+
+        <span id="stepPercent">25%</span>
+
+    </div>
+
+    <div class="step-progress">
+        <div id="stepProgress"></div>
+    </div>
+
+
+    <!-- STEP CARD -->
+    <section class="step-card">
+
+        <div class="step-image" id="stepImage">
+            ⏻
+        </div>
+
+        <div class="step-content">
+
+            <p class="step-label">
+                Step <span id="currentStep">1</span>
+            </p>
+
+            <h2 id="stepTitle">
+                Find the side button.
+            </h2>
+
+            <h3 id="stepInstruction">
+                Look along the side edge of your phone.
+            </h3>
+
+            <button class="replay-btn" onclick="readInstruction()">
+                🔊 Replay instruction
+            </button>
+
+            <div class="navigation-buttons">
+
+                <button
+                    id="backBtn"
+                    class="back-btn"
+                    onclick="previousStep()">
+                    ← Back
+                </button>
+
+                <button
+                    id="nextBtn"
+                    class="next-btn"
+                    onclick="nextStep()">
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRACTICE -->
+    <section class="practice-card">
+
+        <h2>✋ Practice safely</h2>
+
+        <p>
+            Practice: Find the brightness control.
+            You do not need to change any settings.
+        </p>
+
+        <div class="practice-box">
+            Brightness control
+        </div>
+
+        <label class="checkbox-label">
+
+            <input
+                type="checkbox"
+                id="practiceCheck"
+                onchange="checkPractice()">
+
+            I tried the practice
+
+        </label>
+
+    </section>
+
+
+    <!-- QUIZ -->
+    <section class="quiz-card">
+
+        <h2>❓ Quick quiz</h2>
+
+        <p id="quizQuestion">
+            What should you do to open an app?
+        </p>
+
+
+        <button
+            class="quiz-option"
+            onclick="answerQuiz(this, true)">
+            A. Tap the app icon once
+        </button>
+
+
+        <button
+            class="quiz-option"
+            onclick="answerQuiz(this, false)">
+            B. Shake the phone
+        </button>
+
+
+        <button
+            class="quiz-option"
+            onclick="answerQuiz(this, false)">
+            C. Press every button
+        </button>
+
+
+        <button
+            id="finishBtn"
+            class="finish-btn"
+            onclick="finishLesson()"
+            disabled>
+            I understand — finish lesson
+        </button>
+
+
+        <p class="warning">
+            Practice uses pretend information only.
+            Never enter real passwords, PINs, OTPs, or payment details.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <span>Digital Kabuhayan</span>
+
+    <span>
+        A patient digital teacher, one step at a time.
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
